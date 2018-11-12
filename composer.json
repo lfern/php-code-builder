@@ -15,12 +15,12 @@
   "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/lfern/json-schema"
+        "url": "https://github.com/lfern/php-json-schema"
     }
   ],
   "require": {
     "ext-json": "*",
-    "lfern/json-schema": "master",
+    "swaggest/json-schema": "dev-fix-external-ref",
     "swaggest/code-builder": "^0.3.1",
     "php": ">=5.5.0"
   },
