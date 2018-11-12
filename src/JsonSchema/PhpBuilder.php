@@ -50,6 +50,8 @@ class PhpBuilder
     public $makeEnumConstants = false;
     public $skipSchemaDescriptions = false;
 
+    public $skipSetUpProperties = false;
+
     /**
      * Squish multiple $ref, a PHP class for each $ref will be created if false
      * @var bool
@@ -128,7 +130,9 @@ class PhpBuilder
         $body = new PhpCode();
 
         $class->addMeta($schema, self::SCHEMA);
-        $class->addMethod($setupProperties);
+        if (!$this->skipSetUpProperties){
+            $class->addMethod($setupProperties);
+        }
 
         $generatedClass->class = $class;
         $generatedClass->path = $path;
