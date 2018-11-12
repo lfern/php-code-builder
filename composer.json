@@ -12,9 +12,15 @@
       "homepage": "https://github.com/vearutop"
     }
   ],
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/lfern/json-schema"
+    }
+  ],
   "require": {
     "ext-json": "*",
-    "swaggest/json-schema": "^0.12.0",
+    "lfern/json-schema": "master",
     "swaggest/code-builder": "^0.3.1",
     "php": ">=5.5.0"
   },
